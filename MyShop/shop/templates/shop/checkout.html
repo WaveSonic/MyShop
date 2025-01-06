@@ -1,0 +1,16 @@
+{% extends 'shop/layout.html' %}
+{% block title %}Оформлення замовлення | MyShop{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Оформлення замовлення</h1>
+    <form method="POST" class="form-horizontal">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-flex justify-content-between mt-4">
+        <a href="{% url 'cart' %} " class="btn btn-secondary mt-3">Переглянути кошик</a>
+        <button type="submit" class="btn btn-primary mt-3">Підтвердити замовлення</button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

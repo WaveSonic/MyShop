@@ -1,0 +1,369 @@
+.header {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .logo img {
+    max-height: 50px;
+}
+
+.header .contact-info {
+    font-size: 14px;
+}
+
+.header .cart-icon {
+    position: relative;
+}
+
+.header .cart-icon .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.categories-menu {
+    background-color: #343a40;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.categories-title {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.categories-list li {
+    margin-bottom: 10px;
+}
+
+.category-link {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-link:hover {
+    background-color: #222;
+    color: red;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.price {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.cart-quantity input {
+    width: 10px;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.cart-quantity {
+    width: 60px; /* Фіксована ширина */
+    min-width: 60px; /* Мінімальна ширина, щоб не звужувалося */
+    max-width: 60px; /* Максимальна ширина */
+    text-align: center; /* Вирівнювання тексту по центру */
+}
+.form-inline {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 10px;
+}
+
+.container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.related-products {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.related-item h5 {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.related-item p {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+}
+
+.footer .payment-methods i {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+#searchResults {
+    max-height: 400px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.related-products .product-name {
+    color: #000; /* Чорний колір для назви товару */
+    font-weight: normal; /* Видаляємо жирний шрифт, якщо він є */
+    text-decoration: none; /* Прибираємо підкреслення (якщо є) */
+}
+
+.related-products .price {
+    color: #000; /* Чорний колір для ціни */
+    font-weight: bold; /* Можна залишити жирним, якщо так потрібно */
+}
+
+.card {
+    height: 100%; /* Робимо висоту картки динамічною */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Розподіляємо простір між елементами картки */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Ефект збільшення при наведенні */
+}
+
+.card-img-top {
+    height: 150px; /* Задаємо фіксовану висоту для зображень */
+    object-fit: cover; /* Щоб зображення масштабувалося та не обрізалося */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Додаємо крапки в кінці, якщо текст перевищує межу */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Обрізаємо після 3 рядків */
+    -webkit-box-orient: vertical;
+}
+
+.price {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header .contact-info {
+        margin-top: 10px;
+    }
+
+    .card-img-top {
+        height: 120px; /* Зменшуємо висоту зображення на маленьких екранах */
+    }
+
+    .cart-quantity input {
+        width: 60px; /* Зменшена ширина поля кількості */
+    }
+
+    .table th, .table td {
+        padding: 10px; /* Зменшуємо відступи в таблиці на маленьких екранах */
+        font-size: 14px; /* Менший розмір шрифту в таблиці */
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer .payment-methods i {
+        margin-top: 10px;
+    }
+}
+
+/* Стиль для мобільної версії */
+#categoriesMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+/* Відображення меню */
+#categoriesMenu.active {
+    transform: translateX(0);
+}
+
+
+@media (max-width: 768px) {
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table {
+        width: 100%;
+        min-width: 600px; /* Мінімальна ширина таблиці */
+    }
+}
+
+
+/* Стилі для кнопки Категорії */
+.categories-toggle-btn {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Стилі для спадаючого списку */
+.categories-dropdown {
+    background-color: #343a40;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+}
+
+/* Стилі для елементів списку */
+.categories-dropdown .category-link {
+    display: block;
+    color: #ccc;
+    background-color: #444;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 5px;
+}
+
+.categories-dropdown .category-link:hover {
+    background-color: #222;
+    color: red;
+}

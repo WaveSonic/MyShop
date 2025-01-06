@@ -1,0 +1,12 @@
+{% extends 'shop/layout.html' %}
+{% block title %}
+Замовлення успішно оформлене | MyShop
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Дякуємо за ваше замовлення!</h1>
+    <p>Ваше замовлення №{{ order_id }} було успішно оформлено. Наші менеджери зв'яжуться з вами найближчим часом.</p>
+    <a href="{% url 'home_page' %}" class="btn btn-primary">Повернутися на головну сторінку</a>
+</div>
+{% endblock %}

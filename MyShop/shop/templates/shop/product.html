@@ -1,0 +1,88 @@
+{% extends 'shop/layout.html' %}
+{% block title %}
+{{ product.name }} | MyShop
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <!-- Права частина з інформацією про товар -->
+        <main class="col-md-9">
+            <div class="product-details bg-light p-4 rounded">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Основне зображення товару -->
+                        <div id="mainImageContainer">
+                            <img id="mainImage" src="{{ product.photos.0 }}" alt="{{ product.name }}" class="d-block w-100 product-image">
+                        </div>
+
+                        <!-- Список маленьких зображень -->
+                        <div class="mt-3">
+                            <div class="row">
+                                {% for photo in product.photos|slice:":-1" %}  <!-- Виключаємо останнє фото -->
+                                <div class="col-3">
+                                    <img src="{{ photo }}" class="img-thumbnail small-thumbnail" alt="{{ product.name }}" onclick="changeMainImage('{{ photo }}')">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h1>{{ product.name }}</h1>
+                        <p><strong>Артикул: </strong>{{ product.id }}</p>
+                        <p><strong>Наявність:</strong> {{ product.the_is }}</p>
+                        <h2 class="price">{{ product.price }} грн. з ПДВ</h2>
+                        <div class="quantity d-flex align-items-center">
+                            <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <div class="quantity d-flex align-items-center">
+                                <label for="quantity" class="me-2">Кількість:</label>
+                                <input type="number" id="quantity" name="quantity" value="1" min="1" class=" cart-quantity form-control w-25 me-2" style="bottom: -10px; position:relative;">
+                                <button type="submit" class="btn btn-primary">Купити</button>
+                            </div>
+                            </form>
+                        </div>
+                        <div class="ratings mt-3">
+                            <p>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="ms-2">6 відгуків | <a href="#">Написати відгук</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Опис товару -->
+                <div class="product-description mt-4">
+                    <h3>Опис</h3>
+                    <p>{{ product.desc }}</p>
+                </div>
+            </div>
+        </main>
+        <aside class="col-md-3">
+    <div class="related-products">
+        <h4>Схожі товари</h4>
+        <ul class="list-unstyled">
+            {% for related in related_products %}
+            <li class="related-item">
+                <a href="{% url 'product' product_id=related.id %}">
+                    <img src="{{ related.photos.0 }}" alt="{{ related.name }}" class="img-thumbnail mb-2">
+                    <h5 class="product-name">{{ related.name }}</h5>
+                    <p class="price"><strong>{{ related.price }} грн.</strong></p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</aside>
+    </div>
+</div>
+<script>
+    function changeMainImage(imageUrl) {
+        document.getElementById('mainImage').src = imageUrl;
+    }
+</script>
+{% endblock %}
