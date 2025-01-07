@@ -367,3 +367,52 @@ h1 {
     background-color: #222;
     color: red;
 }
+
+
+.btn-orange {
+    background-color: #ff5722;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #e64a19;
+}
+.header-container {
+    max-width: 1200px; /* Вузький контейнер */
+    margin: 0 auto; /* Центрування */
+}
+.btn-orange {
+    background-color: #ff5722; /* Помаранчевий колір */
+    border: none;
+    color: white;
+}
+.btn-orange:hover {
+    background-color: #e64a19;
+}
+.icon-btn {
+    font-size: 1.25rem; /* Розмір іконок */
+    margin-right: 10px;
+    color: #007b5e; /* Колір іконок */
+    cursor: pointer;
+}
+.icon-btn:hover {
+    color: #004c3a; /* Зміна кольору при наведенні */
+}
+
+#searchResults {
+    position: absolute;
+    top: calc(100% + 2px); /* Трохи відступаємо вниз після поля */
+    left: 0;
+    width: 200%; /* Ширина збігається з шириною батьківського контейнера */
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10; /* Забезпечує, що результати відображаються над іншими елементами */
+}
+
+.input-group {
+    position: relative; /* Додаємо контекст позиціонування */
+    z-index: 1; /* Забезпечує, щоб елементи під цим контейнером не перекривали його */
+}
