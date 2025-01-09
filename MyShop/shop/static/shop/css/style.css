@@ -395,9 +395,6 @@ h1 {
     color: #007b5e; /* Колір іконок */
     cursor: pointer;
 }
-.icon-btn:hover {
-    color: #004c3a; /* Зміна кольору при наведенні */
-}
 
 #searchResults {
     position: absolute;
@@ -415,4 +412,21 @@ h1 {
 .input-group {
     position: relative; /* Додаємо контекст позиціонування */
     z-index: 1; /* Забезпечує, щоб елементи під цим контейнером не перекривали його */
+}
+
+/* Відступ між кнопками */
+.icon-button {
+    margin-right: 100px; /* Відступ між кнопками */
+}
+
+/* Останній елемент без відступу */
+.icon-button:last-child {
+    margin-right: 0;
+}
+
+/* Зміна фону при наведенні */
+.icon-button:hover {
+    background-color: orange;
+    border-color: orange; /* Якщо потрібно змінити рамку */
+    color: white; /* Колір тексту та значків */
 }

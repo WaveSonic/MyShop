@@ -13,19 +13,19 @@
 
 <body>
     <!-- Хедер -->
-    <header class="bg-light py-2">
+    <header class="bg-light py-1">
         <div class="header-container d-flex align-items-center justify-content-between">
             <!-- Логотип -->
             <div class="d-flex align-items-center">
                 <a href = "{% url 'home_page' %}">
-                    <img src="{% static 'shop/img/logo1.png' %}" alt="IBIS Logo" style="height: 50px; margin-right: 50px;">
+                    <img src="{% static 'shop/img/logo.png' %}" alt="IBIS Logo" style="height: 50px; margin-right: 50px;">
                 </a>
             </div>
 
             <!-- Пошук -->
             <div class="input-group w-50">
                 <input id="searchInput" type="text" class="form-control" placeholder="Пошук" onkeyup="liveSearch()" style="margin-top: 12px;">
-                <div id="searchResults" class="list-group position-absolute w-50" style="display: none; z-index: 1000;">
+                <div id="searchResults" class="list-group position-absolute" style="display: block; z-index: 1000;">
                 </div>
             </div>
 
@@ -33,28 +33,39 @@
             <!-- Мова, телефон і значки -->
             <div class="d-flex align-items-center">
                 <!-- Мова -->
-                <select class="form-select form-select-sm w-auto me-3">
+                <!--- <select class="form-select form-select-sm w-auto me-3">
                     <option>RU</option>
                     <option>UA</option>
                     <option>EN</option>
-                </select>
+                </select>-->
 
                 <!-- Телефон -->
                 <div class="me-3">
                     <i class="bi bi-telephone text-muted me-1"></i>
-                    <span class="text-muted">0 800 600 002</span>
+                    <span class="text-muted">0 800 *** ***</span>
                 </div>
 
-                <!-- Значки -->
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-person icon-btn" title="Особистий кабінет"></i>
-                    <i class="bi bi-balance-scale icon-btn" title="Порівняння"></i>
-                    <i class="bi bi-heart icon-btn" title="Список бажань"></i>
-                    <i class="bi bi-cart icon-btn" title="Кошик"></i>
+                    <a href="{% url 'cart' %}">
+                        <button class="btn btn-outline-secondary icon-button" style="margin-right:20px;">
+                            <i class="bi bi-person icon-btn" title="Особистий кабінет"></i>
+                        </button>
+                    </a>
+                    <a href="{% url 'cart' %}">
+                        <button class="btn btn-outline-secondary icon-button">
+                            <i class="bi bi-cart icon-btn" title="Кошик"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
+
+
+
+
+
+
 
 <div class="container-fluid">
     <div class="row mt-3">
